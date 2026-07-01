@@ -1,9 +1,9 @@
 import { prisma } from "@/lib/prisma";
 
-type UpdateTodoInput = {
+export type UpdateTodoInput = {
   id: number;
-  title: string;
-  completed: boolean;
+  title?: string;
+  completed?: boolean;
 };
 
 export async function updateTodo(input: UpdateTodoInput) {
